@@ -12,11 +12,10 @@
 
 ### install
 
-
 **step 1: install**
 
 ```shell
-$ enpm install
+$ npm install
 ```
 
 ### Core Api
