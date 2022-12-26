@@ -90,7 +90,7 @@ import { channel } from '@atools/isomorphic-channel';
 channel.debug();
 ```
 
-### handshake with iframe
+### Handshake with iframe
 
 #### handshake
 
