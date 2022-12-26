@@ -1,6 +1,6 @@
 {
   "name": "@atools/isomorphic-channel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Isomorphic channel for Micro Frontends.",
   "main": "lib/index.js",
   "files": [
