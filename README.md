@@ -31,7 +31,7 @@ channel.setup()
 
 #### on
 
-> listen from `channel`, return a `cancellation`
+> Listen from `channel`, return a `cancellation`
 
 ```javascript
 import { channel } from '@atools/isomorphic-channel';
@@ -52,7 +52,7 @@ const remove = channel.on('iframe-broadcast', (payload) => {
 import { channel, cb } from '@atools/isomorphic-channel';
 
 // The magic of cb.autoRun
-// 1. It will break the limitation of [structured clone algorithm]
+// 1. It will break the limitation of [structured clone algorithm].
 // 2. Transform handler to current context.
 channel.on('qiankun-broadcast', cb.autoRun((payload) => {
   alert(`in iframe: ${JSON.stringify(payload)}`)
@@ -61,7 +61,7 @@ channel.on('qiankun-broadcast', cb.autoRun((payload) => {
 
 #### broadcast
 
-> broadcast to `channel`
+> Broadcast to `channel`
 
 
 ```javascript
@@ -74,7 +74,7 @@ setTimeout(() => {
 
 #### send
 
-> send to `channel`, without `broadcast-mode`
+> Send to `channel`, without `broadcast-mode`
 
 ```javascript
 import { channel } from '@atools/isomorphic-channel';
@@ -94,7 +94,7 @@ channel.debug();
 
 #### handshake
 
-> see https://github.com/dollarshaveclub/postmate
+> See https://github.com/dollarshaveclub/postmate
 
 
 ```javascript
