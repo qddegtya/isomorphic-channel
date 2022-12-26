@@ -46,7 +46,7 @@ const remove = channel.on('iframe-broadcast', (payload) => {
 
 ⚠️ **listen to iframe context**
 
-> To break the `structured clone algorithm` limitation，We provide `cb.autoRun`, you need to use it to wrap your handler.
+> To break the `structured clone algorithm` limitation, we provide `cb.autoRun`, you need to use it to wrap your handler.
 
 ```javascript
 import { channel, cb } from '@atools/isomorphic-channel';
