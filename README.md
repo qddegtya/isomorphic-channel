@@ -10,7 +10,7 @@
 * 📢 Support `broadcast-mode`.
 * 🚀 Support handler binding to `iframe`, No Restrictions(structured clone).
 
-### install
+### Install
 
 **step 1: install**
 
