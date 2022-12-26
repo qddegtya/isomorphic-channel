@@ -4,7 +4,7 @@
 
 ### Feature
 
-![principle](https://raw.githubusercontent.com/qddegtya/isomorphic-channel/master/media/principle.jpeg)
+![principle](https://raw.githubusercontent.com/qddegtya/isomorphic-channel/main/media/principle.jpeg)
 
 * 🤝 Support `Cross-Context` communications.
 * 📢 Support `broadcast-mode`.
