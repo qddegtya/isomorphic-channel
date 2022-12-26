@@ -15,7 +15,7 @@
 **step 1: install**
 
 ```shell
-$ npm install
+$ npm install @atools/isomorphic-channel
 ```
 
 ### Core Api
@@ -25,7 +25,7 @@ $ npm install
 > If you need `broadcast-mode`, must call `setup` first.
 
 ```javascript
-import { channel } from '@ennew/one-portal-channel';
+import { channel } from '@atools/isomorphic-channel';
 channel.setup()
 ```
 
@@ -34,7 +34,7 @@ channel.setup()
 > listen from `channel`, return a `cancellation`
 
 ```javascript
-import { channel } from '@ennew/one-portal-channel';
+import { channel } from '@atools/isomorphic-channel';
 
 const remove = channel.on('iframe-broadcast', (payload) => {
   alert(`in qiankun: ${JSON.stringify(payload)}`)
@@ -49,7 +49,7 @@ const remove = channel.on('iframe-broadcast', (payload) => {
 > To break the `structured clone algorithm` limitation，We provide `cb.autoRun`, you need to use it to wrap your handler.
 
 ```javascript
-import { channel, cb } from '@ennew/one-portal-channel';
+import { channel, cb } from '@atools/isomorphic-channel';
 
 // The magic of cb.autoRun
 // 1. It will break the limitation of [structured clone algorithm]
@@ -65,7 +65,7 @@ channel.on('qiankun-broadcast', cb.autoRun((payload) => {
 
 
 ```javascript
-import { channel } from '@ennew/one-portal-channel';
+import { channel } from '@atools/isomorphic-channel';
 
 setTimeout(() => {
   channel.broadcast('qiankun-broadcast', { key: 'hello, I am qianku.' })
@@ -77,7 +77,7 @@ setTimeout(() => {
 > send to `channel`, without `broadcast-mode`
 
 ```javascript
-import { channel } from '@ennew/one-portal-channel';
+import { channel } from '@atools/isomorphic-channel';
 
 channel.send(message, payload);
 ```
@@ -85,7 +85,7 @@ channel.send(message, payload);
 ### Enable Debug Mode
 
 ```javascript
-import { channel } from '@ennew/one-portal-channel';
+import { channel } from '@atools/isomorphic-channel';
 
 channel.debug();
 ```
