@@ -1,0 +1,27 @@
+{
+  "name": "@atools/isomorphic-channel",
+  "version": "1.0.0",
+  "description": "Isomorphic channel for Micro Frontends.",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js --fix",
+    "dev": "./node_modules/.bin/rimraf lib && ./node_modules/.bin/babel src --out-dir lib --watch",
+    "build": "./node_modules/.bin/rimraf lib && ./node_modules/.bin/babel src --out-dir lib"
+  },
+  "author": "xiaoa",
+  "license": "MIT",
+  "dependencies": {
+    "xajs": "^1.0.13"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.7.0",
+    "rimraf": "^3.0.2"
+  }
+}
