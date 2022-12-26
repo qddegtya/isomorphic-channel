@@ -4,7 +4,7 @@
 
 ### Feature
 
-![principle](./media/principle.jpeg)
+![principle](https://raw.githubusercontent.com/qddegtya/isomorphic-channel/master/media/principle.jpeg)
 
 * 🤝 Support `Cross-Context` communications.
 * 📢 Support `broadcast-mode`.
