@@ -111,3 +111,7 @@ const disconnect = channel.handshake({
 // disconnect
 disconnect();
 ```
+
+### Thanks
+
+* [postmate - 📭 A powerful, simple, promise-based postMessage library.](https://github.com/dollarshaveclub/postmate)
