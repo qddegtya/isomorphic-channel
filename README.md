@@ -1,6 +1,9 @@
 ### About
 
 > Isomorphic channel for Micro Frontends.
+### Motivation
+
+In large web applications, we often load pages in different execution contexts. To solve historical technical debt problems, sometimes we choose not to be radical, but to choose more rapid integration. So many solutions are emerging in the community, such as what are called `Micro Frontends`, which are most popular. However, we still believe that the most perfect sandbox isolation scheme in the browser environment is `iframe`, so we choose to let them coexist with self-built sandboxes, at this time we need a developer-friendly communication solution, this is what `isomorphic-channel` does.
 
 ### Feature
 
