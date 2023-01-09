@@ -134,11 +134,14 @@ const Channel = (name = GLOBAL_CHANNEL_SYMBOL) => {
         })
       })
 
-      const scheduleChildHandler = ({ origin, task, uuid }) => {
-        // sync
+      // push child handler into global schedule
+      const scheduleChildHandler = ({ origin, task, uuid, callbackId }) => {
         childScheduleQueue.forEach((queue) => {
-          // every single uuid in every single origin execute once
-          if (uuid === queue.uuid && origin === queue.origin) {
+          if (
+            callbackId === queue.callbackId
+            && uuid === queue.uuid
+            && origin === queue.origin
+          ) {
             clearTimeout(queue.nextTick)
           }
         })
@@ -146,7 +149,8 @@ const Channel = (name = GLOBAL_CHANNEL_SYMBOL) => {
         childScheduleQueue.push({
           origin,
           nextTick: setTimeout(task),
-          uuid
+          uuid,
+          callbackId
         })
       }
 
@@ -156,11 +160,13 @@ const Channel = (name = GLOBAL_CHANNEL_SYMBOL) => {
         for (const name in iframeChildContextListeners) {
           const listeners = iframeChildContextListeners[name]
           listeners.forEach(({ handler, uuid }) => {
+            let callbackId = 0
             child.on(name, (payload) =>
               scheduleChildHandler({
                 origin: child.childOrigin,
                 task: () => handler(payload),
-                uuid
+                uuid,
+                callbackId: ++callbackId,
               })
             )
           })
