@@ -283,11 +283,19 @@ class Postmate {
     url,
     name,
     classListArray = [],
+    attributes = {}
   }) {
     // eslint-disable-line no-undef
     this.parent = window
     this.frame = document.createElement('iframe')
     this.frame.name = name || ''
+
+    // attributes setter
+    for (const k in attributes) {
+      // TODO: safe ?
+      this.frame[k] = attributes[k];
+    }
+
     this.frame.classList.add.apply(this.frame.classList, classListArray)
     container.appendChild(this.frame)
     this.child =
