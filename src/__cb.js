@@ -1,4 +1,4 @@
-export const GLOBAL_CB = '@@one-portal/cb'
+export const GLOBAL_CB = '@@isomorphic-channel/cb'
 
 const Cb = () => {
   let callbacks = {}
