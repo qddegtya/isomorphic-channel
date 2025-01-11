@@ -1,27 +1,35 @@
 {
-  "name": "@atools/isomorphic-channel",
-  "version": "2.0.2",
-  "description": "Isomorphic channel for Micro Frontends.",
+  "name": "isomorphic-channel",
+  "version": "1.0.0",
+  "description": "A channel for cross-context communication",
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint ./src/**/*.js --fix",
-    "dev": "./node_modules/.bin/rimraf lib && ./node_modules/.bin/babel src --out-dir lib --watch",
-    "build": "./node_modules/.bin/rimraf lib && ./node_modules/.bin/babel src --out-dir lib"
-  },
-  "author": "xiaoa",
-  "license": "MIT",
-  "dependencies": {
-    "xajs": "^1.0.13"
+    "clean": "rimraf lib",
+    "build": "npm run clean && babel src -d lib",
+    "test": "jest --config jest.config.js",
+    "test:watch": "jest --config jest.config.js --watch",
+    "test:coverage": "jest --config jest.config.js --coverage",
+    "lint": "eslint --config .eslintrc src",
+    "lint:fix": "eslint --config .eslintrc src --fix",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.10",
-    "@babel/preset-env": "^7.16.11",
-    "eslint": "^8.7.0",
-    "rimraf": "^3.0.2"
-  }
+    "@babel/cli": "^7.x",
+    "@babel/core": "^7.x",
+    "@babel/eslint-parser": "^7.26.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.x",
+    "eslint": "^8.x",
+    "jest": "^27.x",
+    "jest-environment-jsdom": "^27.x",
+    "rimraf": "^3.x"
+  },
+  "peerDependencies": {
+    "xajs": "^1.x"
+  },
+  "files": [
+    "lib",
+    "src"
+  ]
 }

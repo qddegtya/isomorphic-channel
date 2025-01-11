@@ -1,5 +1,13 @@
 {
-  "parserOptions": { "sourceType": "module" },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "plugins": ["@babel/plugin-proposal-class-properties"]
+    }
+  },
   "rules": {
     "indent": [2, 2],
     "quotes": [2, "single"],
@@ -8,7 +16,11 @@
   },
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true  // 这会自动包含 process 作为全局变量
+  },
+  "globals": {
+    "process": true
   },
   "extends": "eslint:recommended"
 }

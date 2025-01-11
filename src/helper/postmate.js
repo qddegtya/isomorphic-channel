@@ -293,7 +293,7 @@ class Postmate {
     // attributes setter
     for (const k in attributes) {
       // TODO: safe ?
-      this.frame[k] = attributes[k];
+      this.frame[k] = attributes[k]
     }
 
     this.frame.classList.add.apply(this.frame.classList, classListArray)
