@@ -5,4 +5,7 @@ module.exports = {
     '^xajs$': '<rootDir>/test/__mocks__/xajs.js',
   },
   testMatch: ['**/test/**/*.test.js'],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons']
+  }
 }
