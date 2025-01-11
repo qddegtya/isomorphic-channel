@@ -1,7 +1,4 @@
 node_modules/
 lib/
 
-*-lock.*
-*.lock
-
 coverage

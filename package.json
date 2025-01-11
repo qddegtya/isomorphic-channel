@@ -29,7 +29,6 @@
     "xajs": "^1.x"
   },
   "files": [
-    "lib",
-    "src"
+    "lib"
   ]
 }
