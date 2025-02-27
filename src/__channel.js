@@ -1,8 +1,8 @@
-import * as AJS from 'xajs'
+import { helper } from 'xajs/functional'
 import { Postmate } from './helper/postmate'
 import { is } from './helper/detector'
 
-const { Puber, Suber } = AJS.functional.helper.PS
+const { Puber, Suber } = helper.PS
 
 export const GLOBAL_CHANNEL_SYMBOL = '@@one-portal/channel'
 let uuid = 0
