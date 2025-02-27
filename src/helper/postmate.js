@@ -26,7 +26,7 @@ export const generateNewMessageId = () => ++_messageId
  * Postmate logging function that enables/disables via config
  * @param  {Object} ...args Rest Arguments
  */
-export const log = (...args) => (Postmate.debug ? console.log(...args) : null) // eslint-disable-line no-console
+export const log = (...args) => (Postmate.debug ? console.log(...args) : null)  
 
 /**
  * Takes a URL and returns the origin
@@ -261,7 +261,7 @@ export class ChildAPI {
  * @type {Class}
  */
 class Postmate {
-  static debug = false // eslint-disable-line no-undef
+  static debug = false  
 
   // Internet Explorer craps itself
   static Promise = (() => {
@@ -278,14 +278,14 @@ class Postmate {
    * @return {Promise}
    */
   constructor({
-    container = typeof container !== 'undefined' ? container : document.body, // eslint-disable-line no-use-before-define
+    container = typeof container !== 'undefined' ? container : document.body,  
     model,
     url,
     name,
     classListArray = [],
     attributes = {}
   }) {
-    // eslint-disable-line no-undef
+     
     this.parent = window
     this.frame = document.createElement('iframe')
     this.frame.name = name || ''
